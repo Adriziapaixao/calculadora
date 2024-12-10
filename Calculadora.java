@@ -20,7 +20,9 @@ public class Calculadora {
         System.out.println("2 - Subtração");
         System.out.println("3 - Multiplicação");
         System.out.println("4 - Divisão");
+        System.out.println("5 - Potenciação");
         System.out.println("Digite o número correspondente a sua operação:");
+
         int calculo = scanner.nextInt();
 
         double resultado;
@@ -55,6 +57,13 @@ public class Calculadora {
                     calculoValidado = false;
                 }
                 break;
+
+            case 5:
+                resultado = Math.pow(n1, n2);
+                System.out.println("Operação escolhida:Potenciação");
+                System.out.printf("Resultado: %.2f%n", resultado);
+                break;
+
             default:
                 System.out.println("Erro: operação inválida");
                 calculoValidado = false;
